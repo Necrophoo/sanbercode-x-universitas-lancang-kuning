@@ -1,0 +1,60 @@
+soal no 1
+CREATE DATABASE myshop;
+
+soal 2
+A. Table users
+create table users(
+id int PRIMARY KEY AUTO_INCREMENT,
+name varchar (255) not null,
+email varchar (255) not null,
+password varchar (255)not null
+)
+B. item
+CREATE TABLE category (
+    id int PRIMARY KEY AUTO_INCREMENT,
+    name varchar (255) not null
+)
+C.
+CREATE TABLE item(
+id int PRIMARY KEY AUTO_INCREMENT ,
+name VARCHAR( 255 ) NOT NULL ,
+description VARCHAR( 255 ) NOT NULL ,
+price int NOT NULL ,
+stock int NOT NULL ,
+category_id int NOT NULL
+)
+
+soal 3 
+input data pada table
+A. Table users
+INSERT INTO users (name,email,password)
+VALUES ('ATTALLAH RASYID','rasyidalfath@gmail.com','rasyid09');
+
+B. category
+INSERT INTO category (name)
+VALUES ('gadget'),('cloth'),('men'),('women'),('branded');
+
+C. Item 
+INSERT INTO item (name,description,price,stock,category_id)
+VALUES ('samsung b50', 'HP keren dari merk samsung','4000000','100','1'),('Uniklo','baju keren brand ternama','500000','50','2'),('IMHO Watch','jam tangan impor','2000000','10','1');
+
+soal 4
+
+A. mengambil data users
+SELECT name,email
+FROM users;
+
+B. data item
+SELECT * FROM item
+WHERE price > 1000000;
+
+C. menampilkan data item item join dengan category
+SELECT * FROM item
+WHERE name LIKE 'Uniklo';
+
+soal 5
+
+MENGUBAH DATA dari DATABASE
+UPDATE Item
+SET price = '2500000'
+WHERE id = 1;
